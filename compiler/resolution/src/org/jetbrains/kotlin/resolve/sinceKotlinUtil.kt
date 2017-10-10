@@ -23,11 +23,7 @@ import org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptor
 import org.jetbrains.kotlin.name.FqName
 import org.jetbrains.kotlin.resolve.calls.util.FakeCallableDescriptorForTypeAliasObject
 
-internal val SINCE_KOTLIN_FQ_NAME = FqName("kotlin.SinceKotlin")
-
-// TODO: use-site targeted annotations
-fun DeclarationDescriptor.getSinceKotlinAnnotation(): AnnotationDescriptor? =
-        annotations.findAnnotation(SINCE_KOTLIN_FQ_NAME)
+val SINCE_KOTLIN_FQ_NAME = FqName("kotlin.SinceKotlin")
 
 /**
  * @return true if the descriptor is accessible according to [languageVersionSettings], or false otherwise. The [actionIfInaccessible]
