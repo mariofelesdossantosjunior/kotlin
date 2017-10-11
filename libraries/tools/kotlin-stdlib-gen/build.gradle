@@ -10,7 +10,7 @@ dependencies {
 
 compileKotlin {
     compilerJarFile = null
-    kotlinOptions.freeCompilerArgs = ["-version"]
+    kotlinOptions.freeCompilerArgs = ["-version", "-Xnormalize-constructor-calls=enable"]
 }
 
 task run(type: JavaExec) {
