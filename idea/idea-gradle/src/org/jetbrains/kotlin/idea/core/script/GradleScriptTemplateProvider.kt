@@ -97,7 +97,7 @@ class GradleKotlinDSLTemplateProvider(project: Project) : AbstractGradleScriptTe
     // TODO_R: check this against kotlin-dsl branch that uses daemon
     override val additionalResolverClasspath: List<File> get() =
             // additionally need compiler jar to load gradle resolver
-            gradleLibDir.listFiles { file -> file.name.startsWith("kotlin-compiler-embeddable") }
+            gradleLibDir.listFiles { file -> file.name.startsWith("kotlin-compiler-embeddable") || file.name.startsWith("kotlin-stdlib") }
                     .firstOrNull()?.let(::listOf).orEmpty()
 }
 
